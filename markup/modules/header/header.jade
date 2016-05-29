@@ -1,0 +1,40 @@
+include ../nav-top/nav-top
+include ../nav-main/nav-main
+include ../logo/logo
+include ../catalog/catalog
+include ../search/search
+
+mixin header(data)
+	+b.header&attributes(attributes)
+		+nav-top
+		+e.nav
+			.container
+				.row
+					.col-sm-3.col-xs-6.mob-padding
+						+logo.__logo
+					.col-sm-6
+						+e.H1.title интернет-магазин аквариумистики
+						+e.P.subtitle сделаем ваше море красочным!
+
+						+nav-main
+
+					.col-sm-3.col-xs-6.mob-padding
+						+e.phones
+							+e.phone_one 
+								| 8 (351) 
+								span 238-01-23
+							+e.phone_two 
+								| 8 (800) 
+								span 238-01-23
+							+e.phone-disc Звонок по России бесплатный
+							+e.A.phone-coll(href="#headerPopup").hidden-xs Заказать обратный звонок
+
+		//- +e.catalog
+		//- .container
+		//- 	.row
+		//- 		.col-md-3
+		//- 			+catalog(catalog.defaults)
+		//- 		.col-md-9
+		//- 			+e.search-wrap
+		//- 				+search
+		//- 			block

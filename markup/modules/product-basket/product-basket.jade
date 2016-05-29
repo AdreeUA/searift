@@ -1,0 +1,25 @@
+mixin product-basket(data)
+	+b.product-basket&attributes(attributes)
+		each ent, num in data
+			+e.item
+				+e.SPAN.item-close X
+				+e.info
+					+e.image
+						img(src="__static__img/assets/product-basket/#{ent.img}")
+					+e.A.title(href="#")= ent.name
+					+e.size= ent.size
+
+				+e.technic
+					+e.code Код: 
+						span= ent.code
+					+e.amount
+						input(type="number" value="#{ent.amount}")
+					+e.item-price 
+						span #{ent.price} 
+						руб.
+
+		+e.total
+			+e.total-price Итого: 
+				span 1460 
+				+e.SPAN.currency руб.
+			+e.total-btn Оформить

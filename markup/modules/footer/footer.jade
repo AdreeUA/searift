@@ -1,0 +1,45 @@
+include ../social/social
+
+mixin footer(data)
+	+b.footer&attributes(attributes)
+		.container
+			+e.A.btn-up(href="#")#btn-up
+			.row
+				.col-sm-2.hidden-xs
+					+e.A.logo(href="#")
+						+e.img(src="__static__img/assets/footer/logo-footer.png" alt="Logo")
+				.col-sm-7.col-xs-9
+					+e.menu
+						+e.UL.menu-list.hidden-xs
+							+e.menu-item
+								+e.A.menu-link(href="#")
+									| О нас
+							+e.menu-item
+								+e.A.menu-link(href="#")
+									| Оплата и доставка
+							+e.menu-item
+								+e.A.menu-link(href="#")
+									| Акции и скидки
+							+e.menu-item
+								+e.A.menu-link(href="#")
+									| Оптовикам  
+							+e.menu-item
+								+e.A.menu-link(href="#")
+									| Услуги
+							+e.menu-item
+								+e.A.menu-link(href="#")
+									| Контакты
+
+						+e.copyright © 2010-2016.<br class="visible-xs-inline-block"> «Морской Риф», интернет-магазин аквариумистики
+
+				.col-sm-2.hidden-xs
+					+e.phones
+						+e.phone_one 
+							| 8 (351) 238-01-23
+						+e.phone_two 
+							| 8 (800) 238-01-23
+						+e.phone-disc Звонок по России бесплатный
+
+				.col-sm-1.col-xs-3
+					+e.social
+						+social

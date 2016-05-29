@@ -1,0 +1,50 @@
+// Common styles of the project
+
+html, body
+    height 100%
+
+.page
+    font-size 14px
+    background-color $bg-main
+    max-width 1200px
+    font-family $font-regul
+    margin-right auto
+    margin-left auto
+    color $color-main
+    // Стили для body
+
+.page__wrapper
+    min-height 100%
+    overflow hidden
+
+
+* html .page__wrapper
+    height 100%
+
+a
+    text-decoration none
+    color inherit
+    &:hover
+        color $color-link
+
+
+.mob-padding
+    +below('xs')
+        padding-left 10px
+        padding-right 10px
+
+h3
+    font-size 16px
+    font-family $font-bold
+
+p
+    line-height 1.5
+
+.content
+    // padding-top 33px
+    padding-bottom 101px
+
+.index__content
+    padding-bottom 30px
+    +below(sm)
+        padding 0

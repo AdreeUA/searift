@@ -1,0 +1,16 @@
+mixin size(data)
+	+b.size&attributes(attributes)
+		+e.title Размер:
+		+e.inner
+			+e.inputs_m
+				input(type="checkbox" name="size" id="size-m")
+				+e.LABEL.label(for="size-m") 
+					| M (до 5 см)
+				+e.input-number
+					input(type="text")
+			+e.inputs_l
+				input(type="checkbox" name="size" id="size-l")
+				+e.LABEL.label(for="size-l")
+					| L (до 15 см)
+				+e.input-number
+					input(type="text")

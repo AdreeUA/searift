@@ -1,0 +1,30 @@
+include ../submenu/submenu
+include ../burger/burger
+include ../product-cart/product-cart
+
+mixin catalog(data)
+	+b.catalog&attributes(attributes)
+		each ent, num in data
+			+e.title= ent.title
+			+e.burger-wrap
+				+burger.__burger
+			+e.UL.list
+				if ent.menu
+					each item, i in ent.menu
+						+e.item
+							+e.A.link(href="#{item.link}")= item.name
+							if item.submenu
+								+e.sub
+									+e.product-cart
+										+product-cart
+											+e.IMG.image(src="__static__/img/assets/product-cart/product-item-1.jpg")
+											+e.title Тридакна кроцея (сверлящая, шафранная)
+											+e.btns
+												+e.price-wrap
+													+e.price 
+														span 1460 
+														| руб.
+												+e.btn-wrap
+													+e.btn в корзину
+									+e.submenu
+										+submenu(item.submenu)

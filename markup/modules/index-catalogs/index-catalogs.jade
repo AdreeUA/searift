@@ -1,0 +1,40 @@
+include ../title/title
+
+mixin index-catalogs(data)
+	+b.index-catalogs&attributes(attributes)
+		+title место для заголовка
+		//- +e.overlay(onclick="style.pointerEvents='none'")
+
+		+e.container#scrollbar1
+			.viewport
+				+e.UL.list.overview
+					each ent, num in data
+						+e.item
+							+product-cart
+								if ent.specialOffer
+									+e.special-baner
+										| предложение недели
+								+e.IMG.image(src="__static__img/assets/index-catalogs/#{ent.image}")
+								+e.A.title(href="#")= ent.name
+								+e.btns
+									+e.price-wrap
+										+e.price 
+											span #{ent.price}
+											| руб.
+									if ent.maxSale
+										+e.sale-baner 
+											| максимальные скидки
+										+e.btn-wrap
+											+e.sale= ent.maxSale
+											+e.A.btn(href="#") 
+												span в корзину
+									else
+										+e.btn-wrap
+											+e.A.btn(href="#") 
+												span в корзину
+
+			//- +e.pagination
+			.scrollbar
+				.track
+					.thumb
+						.end

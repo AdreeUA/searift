@@ -1,0 +1,52 @@
+.preview
+    // padding-bottom 30px
+
+    +above(md)
+        //
+
+        // .swiper-pagination-bullet-active
+
+    .slick-current
+        img
+            transition all .3s
+            border 2px solid #fff
+            box-shadow  0 0 0 1px $bg-nav
+
+    img
+        display inline-block
+        border 1px solid #e2e5e9
+
+    &__full
+        margin-bottom 4px
+
+        +below('sm')
+            padding-bottom 40px
+            margin-bottom 0
+
+    &__min
+        +below(sm)
+            display none
+
+    &__min-item
+        padding 3px
+
+    &__image-big
+        min-height 388px
+
+        +below(sm)
+            min-height auto
+
+        // +above(md)
+        //     height 100%
+
+
+    &__image-min
+        width 190px
+        display inline-block
+        width 130px
+        height 92px
+        border-radius 0
+        margin-right 7px
+
+    .slick-dots
+        bottom 18px

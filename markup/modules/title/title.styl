@@ -1,0 +1,19 @@
+.title
+    color #637890
+    font-size 22px
+    font-family $font-bold
+    text-transform uppercase
+    line-height 1.2
+    padding-left 25px
+
+    &:before
+        content ''
+        bg($title)
+        display inline-block
+        margin-left -25px
+        margin-right 8px
+        position relative
+        top 3px
+
+    +below(xs)
+        font-size 20px

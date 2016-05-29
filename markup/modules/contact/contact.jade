@@ -1,0 +1,34 @@
+include ../title/title
+
+mixin contact(data)
+	+b.contact&attributes(attributes)
+		+title контакты
+		.row
+			.col-sm-6
+				+e.item
+					+e.subtitle Звоните нам:
+					+e.phone 8 (351) 238-01-23: 
+					+e.phone 8 (800) 222-01-23 (звонок по России бесплатный)
+				+e.item
+					+e.subtitle Контактный e-mail:
+					+e.A.mail(href="mailto:mail@mail.ru") mail@mail.ru
+				+e.item
+					+e.subtitle Наш адрес:
+					+e.address Москва, 119146, Комсомольский пр-т, дом 7 стр 2
+
+			.col-sm-6
+				+e.FORM.form
+					+e.subtitle Есть вопросы? Напишите нам:
+					+e.input
+						label Ваше имя
+						input(type="text")
+					+e.input
+						label Ваш e-mail
+						input(type="email")
+					+e.input
+						label Вопрос
+						textarea(type="text" rows="3")
+					+e.controls
+						button(value="отправить") отправить
+
+		+e.map#map

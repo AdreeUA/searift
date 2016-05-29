@@ -1,0 +1,121 @@
+.product-cart
+    background-color $color-white
+    border 1px solid #e2e5e9
+    border-radius 3px
+    padding 10px
+    position relative
+    text-align left
+
+    &__image
+        margin-bottom 12px
+        width 100%
+
+    &__title
+        color $bg-nav
+        line-height 1.6
+        margin-bottom 10px
+        text-decoration none
+        display block
+        margin-bottom 10px
+
+    &__header
+        margin-left -10px
+        margin-right -10px
+        background-color $bg-nav
+        // border-radius 3px
+        color $color-white
+        text-transform uppercase
+        line-height 1.8
+        display block
+        text-align center
+        text-decoration none
+        padding 17px 10px 13px
+        background-image url(__static__assets/catalog/catalog-title.png)
+        background-repeat no-repeat
+        background-position 12px 50%
+
+        &:hover
+            color $color-white
+            text-decoration underline
+
+    &__date
+        display block
+
+    &__price
+        color $color-main
+        font-size 13px
+        display inline-block
+        margin-top 7px
+
+        span
+            font-size 19px
+            font-family $font-bold
+            color $color-main
+
+    &__btns
+        text-align justify
+
+    &__price-wrap
+        width 31%
+        display inline-block
+        vertical-align top
+
+    &__btn-wrap
+        width 66%
+        display inline-block
+        vertical-align top
+
+    &__btn-wrap
+        text-align right
+
+    &__btn
+        btn-basket()
+
+    &__btn-more
+        padding 11px
+        background-color $color-second
+        border-radius 3px
+        box-shadow 0 2px 0 #f98a4c
+        color $color-white
+        display inline-block
+        vertical-align middle
+        position relative
+        text-decoration none
+        text-transform uppercase
+        background-position 50% 50%
+
+        &:hover
+            color $color-white
+            color $color-white
+            background-image url(__static__assets/product-cart/catalog-cart-btn.png)
+            background-repeat no-repeat
+
+    &__sale
+        display inline-block
+        vertical-align middle
+        margin-right -3px
+        padding 12px 8px
+        color $color-white
+        font-size 12px
+        text-transform uppercase
+        background-color #f57229
+        border-radius 3px
+        box-shadow 0 2px 0 #f98a4c
+
+    &__sale-baner
+    &__special-baner
+        padding 9px 9px 6px
+        position absolute
+        top -1px
+        left -1px
+        color $color-white
+        font-size 10px
+        text-transform uppercase
+        border-bottom-left-radius 3px
+        border-top-right-radius 3px
+
+    &__sale-baner
+        background-color #f57229
+
+    &__special-baner
+        background-color #3871b4

@@ -1,0 +1,43 @@
+.catalog-list
+
+    .title
+        margin-bottom 30px
+
+    &__items
+        font-size 0
+        text-align center
+        margin 0 -15px 50px
+
+
+    &__item
+        font-size 14px
+        display inline-block
+        background-color $color-white
+        border 1px solid #e2e5e9
+        border-radius 3px
+        padding 10px 10px 22px
+        text-align center
+        text-decoration none
+        transition hover .25s
+        margin 0 8px 20px
+        width  200px
+
+        &:hover
+            border 1px solid $bg-nav
+
+        +below('xs')
+            width 90%
+
+    &__name
+        color $bg-nav
+        text-transform uppercase
+        text-decoration none
+        display block
+
+    &__image
+        width 100%
+        display block
+        margin-bottom 22px
+
+    &__text
+        margin-bottom 32px

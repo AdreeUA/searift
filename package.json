@@ -5,7 +5,11 @@
     "npm": "^3.x.x",
     "node": "^4.x.x"
   },
-  "os": [ "darwin", "linux", "win32" ],
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
   "description": "Powerfull markup builder",
   "main": "gulpfile.js",
   "dependencies": {
@@ -60,7 +64,14 @@
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "bemto.jade": "^1.0.3",
+    "bootstrap-grid": "^2.0.1",
+    "jeet": "^6.1.2",
+    "jquery": "^2.2.4",
+    "rupture": "^0.6.1",
+    "swiper": "^3.3.1"
+  },
   "optionalDependencies": {
     "posix": "^4.0.1",
     "fsevents": "^1.0.11"

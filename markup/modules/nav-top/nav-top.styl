@@ -1,0 +1,78 @@
+.nav-top
+    border-bottom 3px solid #3c679a
+    background $bg-nav
+    font-size 12px
+    color #8695a7
+    line-height 34px
+    position relative
+
+    +below('sm')
+        position fixed
+        width 100%
+        z-index 100
+        top 0
+    //
+    // a
+    //     text-decoration none
+
+    &__bookmarks
+        &:before
+            content ''
+            display inline-block
+            margin-right 11px
+            bg($star)
+
+    &__questions
+        &:before
+            bg($mail)
+            content ''
+            display inline-block
+            margin-right 13px
+
+    &__basket
+        z-index 3
+
+        +below('sm')
+            text-align right
+
+    &__mob-wrap
+
+        +below('sm')
+            top -999px
+            background $bg-nav
+            position absolute
+            width 100%
+            z-index 2
+            transition all .25s
+
+            &_open
+                top 37px
+    &__mob-item
+
+        +below('sm')
+            border-bottom 1px solid #3c679a
+
+    &__burger-wrap
+        display none
+
+        +below('sm')
+            display block
+            position absolute
+            top 9px
+            left 10px
+            z-index 10
+
+    &__search-wrap
+        display none
+        position absolute
+        top 4px
+        left 30%
+        z-index 10
+
+        +below('sm')
+            display block
+
+    &__search
+        border none
+        background-color transparent
+        bg($loop-white)

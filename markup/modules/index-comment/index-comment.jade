@@ -1,0 +1,39 @@
+include ../title/title
+
+mixin index-comment(data)
+	+b.index-comment&attributes(attributes)
+		.container
+
+			+title отзывы о нашей работе
+			+e.list
+				.row
+					each ent, num in data
+						.col-md-3.col-sm-6
+							if ent.first
+								+e.item
+									+e.avatar
+										+e.IMG.img(src="__static__img/assets/index-comment/#{ent.avatar}")
+									+e.content
+										+e.heading
+											+e.SPAN.name= ent.name
+												| ,
+											+e.SPAN.city= ent.city
+										+e.P.text= ent.text
+										+e.A.original-link(href="#") Читать оригинал отзыва Вконтакте
+							else
+								+e.item.hidden-xs
+									+e.avatar
+										+e.IMG.img(src="__static__img/assets/index-comment/#{ent.avatar}")
+									+e.content
+										+e.heading
+											+e.SPAN.name= ent.name
+												| ,
+											+e.SPAN.city= ent.city
+										+e.P.text= ent.text
+										+e.A.original-link(href="#") Читать оригинал отзыва Вконтакте
+
+			+e.btn-wrap
+				+e.A.btn(href="#") см. все отзывы
+		+e.more-comment
+			a(href="") не хватает отзывов? 
+			| приходите и посмотрите как мы работаем!

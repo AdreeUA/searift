@@ -1,0 +1,98 @@
+.index-comment
+    background-color #f0f3f7
+    position relative
+    padding-top 39px
+
+    &__btn
+        color $color-white
+        font-size 12px
+        text-transform uppercase
+        padding 11px 13px
+        background-color $bg-nav
+        border-radius 3px
+        box-shadow 0 2px 0 #486a92
+        display inline-block
+        position absolute
+        top 37px
+        right 14px
+        text-decoration none
+
+        +below('xs')
+            position static
+
+    &__btn-wrap
+        +below('xs')
+            text-align center
+            margin-bottom 46px
+
+    &__item
+        min-height 280px
+        padding 85px 11px 10px
+        background-color $color-white
+        margin-top 104px
+        border 1px solid #e2e5e9
+        border-radius 3px
+        position relative
+
+        +below('xs')
+            margin-bottom 42px
+
+    &__avatar
+        background-color transparent
+        overflow hidden
+        border-radius 50%
+        width 127px
+        height 127px
+        position absolute
+        margin-left -62px
+        left 50%
+        top -62px
+
+    &__img
+        width 100%
+
+    &__heading
+        font-size 16px
+        margin-bottom 14px
+
+    &__name
+        font-family $font-bold
+        color $color-main
+        margin-right 5px
+
+    &__city
+        color #9fa5ab
+
+    &__text
+        color $color-main
+        font-size 12px
+        line-height 20px
+        margin-bottom 18px
+
+    &__original-link
+        color $bg-nav
+        font-size 12px
+        text-decoration underline
+
+    &__more-comment
+        margin-top -35px
+        background-image url(__static__assets/index-comment/bg-comment-block.jpg)
+        background-repeat no-repeat
+        background-size cover
+        padding-top 87px
+        padding-bottom 47px
+        font-size 18px
+        font-family $font-bold
+        text-transform uppercase
+        text-align center
+        color $color-white
+
+        +below('sm')
+            margin-top -45px
+
+        +below('xs')
+            padding 43px
+            margin-top 0
+
+        a
+            color #05b2eb

@@ -1,0 +1,41 @@
+include ../title/title
+
+mixin pop-up(data)
+	+b.pop-up&attributes(attributes)
+		each ent, num in data
+			+e.FORM.form(id="#{ent.id}" action="#")
+				+title= ent.title
+
+				+e.input
+					label(for="name") Ваше имя
+					input(type="text" id="name" name="name" required)
+
+				if ent.mail
+					+e.input
+						label(for="mail") Ваш e-mail
+						input(type="email" id="mail" name="mail" required)
+
+				if ent.phone
+					+e.input
+						label(for="tel") Ваш телефон <br>
+							span (не обязательно)
+						input(type="email" name="tel" id="tel")
+
+				if ent.phoneRequired
+					+e.input
+						label(for="tel") Ваш телефон
+						input(type="email" id="telRequired" name="telRequired" required)
+
+				if ent.question	
+					+e.input
+						label(for="question") Вопрос
+						textarea(type="text" rows="3" id="question" name="question" required)
+
+				if ent.comment		
+					+e.input
+						label(for="comment") Комментарий  <br>
+							span (не обязательно)
+						textarea(type="text" rows="3" id="comment" name="comment")
+
+				+e.controls
+					button(value="отправить") отправить

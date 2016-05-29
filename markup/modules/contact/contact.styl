@@ -1,0 +1,71 @@
+.contact
+
+    .title
+        margin-bottom 30px
+
+    &__subtitle
+        color $color-main
+        font-size 16px
+        font-family $font-bold
+        margin-bottom 16px
+        text-align left
+
+    &__item
+        line-height 22px
+        margin-bottom 26px
+
+    &__form
+        text-align right
+
+        input
+        textarea
+            color $color-main
+            padding 8px
+            background-color $color-white
+            border 1px solid #adb6c0
+            border-radius 3px
+            float right
+            width 70%
+
+            +below('xs')
+                width 100%
+
+
+        label
+            position relative
+            top 12px
+
+            +below('xs')
+                top 0
+                margin-bottom 7px
+                display block
+
+
+    &__input
+        m-cf()
+        margin-bottom 10px
+        text-align left
+
+    &__controls
+        width 70%
+        display inline-block
+        text-align left
+
+        +below('xs')
+            text-align center
+            width 100%
+
+        button
+            color $color-white
+            font-size 12px
+            text-transform uppercase
+            padding 12px 15px
+            background-color $bg-nav
+            border-radius 3px
+            box-shadow 0 2px 0 #486a92
+            border none
+
+    &__map
+        height 300px
+        width 100%
+        margin-top 20px

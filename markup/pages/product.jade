@@ -1,0 +1,23 @@
+extends ../modules/layout-default/layout-default
+include ../modules/header/header
+include ../modules/catalog/catalog
+include ../modules/search/search
+include ../modules/product/product
+include ../modules/index-catalogs/index-catalogs
+
+block head
+	+head(head.defaults)
+
+block content
+	+header
+	.container
+		.row
+			.col-md-3
+				+catalog(catalog.defaults)
+			.col-md-9
+				.search-wrap
+					+search
+				.content.product__wrap
+					+product
+
+		+index-catalogs(indexCatalogs.defaults).product__catalog

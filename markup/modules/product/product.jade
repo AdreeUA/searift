@@ -1,0 +1,67 @@
+include ../title/title
+include ../size/size
+include ../preview/preview
+
+mixin product(data)
+	+b.product&attributes(attributes)
+		+title Креветка-арлекин пятнистая 
+		+e.A.btn-back(href="#") Обратно в каталог
+		.row
+			.col-md-8
+
+				+preview.__preview
+					//- +e.preview-full
+					//- +e.A.image-link(href="#")
+					//- 	+e.IMG.image_first(src="__static__img/assets/product/product-1.jpg")
+					//- +e.A.image-link(href="#")
+					//- 	+e.IMG.image_first(src="__static__img/assets/product/product-min-1.jpg")
+					//- +e.A.image-link(href="#")
+					//- 	+e.IMG.image_first(src="__static__img/assets/product/product-min-2.jpg")
+
+			.col-md-4
+				+e.characteristic
+					+e.btns
+						+e.A.btn-question(href="#") почему мы?
+						+e.A.btn-question_popup(href="#productPopup") есть вопросы?
+					+e.info
+						+e.code Код: 
+							span K8g10 
+						+e.exist Наличие: 
+							span под заказ
+						+e.producer Страна производитель: 
+							span Индонезия
+						+e.pack Способ упаковки: 
+							span пакеты с кислородом 
+
+				+size
+
+				//- +e.size
+				//- 	+e.size-title Размер:
+				//- 	+e.size-inner
+				//- 		+e.size-inputs_m
+				//- 			input(type="checkbox" name="size" id="size-m")
+				//- 			+e.LABEL.label-size(for="size-m") 
+				//- 				| M (до 5 см)
+				//- 			+e.input-number
+				//- 				input(type="text")
+				//- 		+e.size-inputs_l
+				//- 			input(type="checkbox" name="size" id="size-l")
+				//- 			+e.LABEL.label-size(for="size-l")
+				//- 				| L (до 15 см)
+				//- 			+e.input-number
+				//- 				input(type="text")
+
+				+e.btns-price
+					+e.price 
+						span 6170
+						| руб.
+					+e.BUTTON.btn-basket в корзину
+
+		+e.disc
+			+e.H4.subtitle Креветка-арлекин пятнистая (Hymenocera picta)
+
+			+e.P.disc-text Содержат этот вид строго парами. Со всеми хорошо уживаются, за исключением иглокожих. Звезды рассматривают как пищу и съедают их. Объем аквариума от 80 литров со слабым течением и умеренным освещением. Креветкам требуются свободные убежища.
+
+			+e.P.disc-text Для линьки нужно добавлять в воду йод. Важно поддерживать хорошие параметры воды из-за высокой чувствительности креветок к содержанию нитратов и сульфатов меди.
+
+			+e.P.disc-text Кормление: любой живой или замороженный корм.		

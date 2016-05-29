@@ -1,0 +1,31 @@
+extends ../modules/layout-default/layout-default
+include ../modules/header/header
+include ../modules/aquarium/aquarium
+include ../modules/index-slider/index-slider
+include ../modules/index-catalogs/index-catalogs
+include ../modules/index-comment/index-comment
+include ../modules/index-info/index-info
+include ../modules/catalog/catalog
+
+block head
+	+head(head.defaults)
+
+block content
+	//- Include your modules here
+	+header
+	.container
+		.row
+			.col-md-3
+				+catalog(catalog.defaults)
+			.col-md-9
+				.search-wrap
+					+search
+				.content.index__content
+					+aquarium
+	.container.index-slider__wrap
+		+index-slider
+	.container
+		+index-catalogs(indexCatalogs.defaults)
+	+index-comment(indexComment.defaults)
+	.container
+		+index-info

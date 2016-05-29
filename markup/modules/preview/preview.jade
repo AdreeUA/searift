@@ -1,0 +1,15 @@
+mixin preview(data)
+	+b.preview&attributes(attributes)
+
+		+e.full.swiper-container.gallery-top
+			//- .swiper-wrapper
+			+e.IMG.image-big(src="__static__img/assets/preview/product-1.jpg")
+			+e.IMG.image-big(src="__static__img/assets/preview/product-2.jpg")
+
+			//- +e.pagination.swiper-pagination
+		+e.min
+			//- .swiper-wrapper
+			+e.min-item
+				+e.IMG.image-min(src="__static__img/assets/preview/product-min-1.jpg")
+			+e.min-item
+				+e.IMG.image-min(src="__static__img/assets/preview/product-min-2.jpg")

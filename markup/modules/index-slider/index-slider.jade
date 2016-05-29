@@ -1,0 +1,25 @@
+include ../shares/shares
+
+mixin index-slider(data)
+	+b.index-slider&attributes(attributes)
+		+shares.__container.swiper-container
+			+e.list.swiper-wrapper
+				+e.item(style="background-image:url(__static__img/assets/index-slider/slider-image-1.jpg)").swiper-slide
+					+e.promo хит продаж!
+					+e.title Клоун оцеллярис
+					+e.price 950 
+						span.index-slider__price-val руб.
+				+e.item(style="background-image:url(__static__img/assets/index-slider/slider-image-1.jpg)").swiper-slide
+					+e.promo хит продаж!
+					+e.title Клоун оцеллярис
+					+e.price 950 
+						span.index-slider__price-val руб.
+				+e.item(style="background-image:url(__static__img/assets/index-slider/slider-image-1.jpg)").swiper-slide
+					+e.promo хит продаж!
+					+e.title Клоун оцеллярис
+					+e.price 950 
+						span.index-slider__price-val руб.
+			.index-slider__controlls
+				.swiper-button-prev
+				.swiper-button-next
+			.index-slider__pagination.swiper-pagination

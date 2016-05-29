@@ -1,0 +1,33 @@
+.stock-only
+    position relative
+
+    .title
+        margin-bottom 26px
+        padding-right 110px
+
+    .shares
+        margin-bottom 30px
+
+    &__subtitle
+    &__text
+        margin-bottom 32px
+
+    &__btn-back
+        position absolute
+        right 0
+        top 38px
+        color $bg-nav
+        text-decoration underline
+
+        &:hover
+            text-decoration none
+
+        +below('xs')
+            position static
+            text-align center
+            display block
+            margin-bottom 30px
+
+    img
+        width 100%
+        max-width 370px

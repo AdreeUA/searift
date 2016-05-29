@@ -1,0 +1,26 @@
+.submenu
+    m-cf()
+
+    &__item
+        float left
+        width 50%
+
+        +below('sm')
+            width auto
+            float none
+
+    &__link
+        display block
+        margin-right 30px
+        border-bottom 1px solid #e2e7ee
+        padding 9px 0 11px 0
+        text-decoration none
+        color $color-main
+        position relative
+
+        &:hover
+            color $bg-nav
+
+        &:before
+            content '•'
+            margin-right 11px

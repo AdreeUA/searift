@@ -1,0 +1,78 @@
+.footer
+    background-color #f0f3f7
+    padding 26px 0 19px
+    color #9fa5ab
+    font-size 12px
+    position relative
+    border-top 1px solid #c9d2dc
+    m-cf()
+
+    &__logo
+    &__menu
+    &__phones
+    &__social
+        display inline-block
+        vertical-align top
+
+    &__logo
+    &__menu
+        margin-right 67px
+
+        +below('xs')
+            margin-right 0
+
+    &__social
+        float right
+
+    &__menu-list
+        margin-bottom 18px
+
+    &__menu-item
+        display inline-block
+
+    &__menu-link
+        padding 10px
+        color #9fa5ab
+        text-decoration underline
+        display block
+
+        &:hover
+            color $bg-nav
+            text-decoration none
+
+        +below(1189px)
+            padding 5px
+
+    &__copyright
+        line-height 18px
+
+    &__phone
+        font-size 16px
+        text-transform uppercase
+        margin-bottom 8px
+
+        &:first-child
+            margin-bottom 13px
+
+        +below('sm')
+            font-size 12px
+
+    &__btn-up
+        position absolute
+        top -30px
+        right 15px
+        width 30px
+        height 30px
+        background-color #c9d2dc
+        border-radius 3px
+        text-align center
+
+        &:before
+            content ''
+            bg($up)
+            display inline-block
+            margin-top 6px
+
+        +below('xs')
+            right 50%
+            margin-right -15px

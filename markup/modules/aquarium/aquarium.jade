@@ -1,0 +1,19 @@
+mixin aquarium(data)
+	+b.aquarium&attributes(attributes)
+		+e.image-wrap
+			+e.IMG.image(src="__static__img/assets/aquarium/aquarium.jpg")
+			+e.marks_plants
+				+e.circle
+				+e.A.text_top(href="#") Морские растения, камни, песок
+			+e.marks_fish
+				+e.circle
+				+e.A.text_top(href="#") Морские рыбы
+			+e.marks_accessories
+				+e.circle 
+				+e.A.text_top-left(href="#") Аксессуары
+			+e.marks_invertebrates
+				+e.circle 
+				+e.A.text_top(href="#") Морские беспозвоночные
+			+e.marks_feed
+				+e.circle
+				+e.A.text_bottom(href="#")  Корма для аквариумных рыб

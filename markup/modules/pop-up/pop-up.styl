@@ -1,0 +1,73 @@
+.pop-up
+    // max-width 426px
+    // padding 33px
+    // background-color #fff
+    // border 3px solid rgba(255, 255, 255, 0.19)
+    // border 3px solid black
+    // border-radius 3px
+    width 426px
+    position absolute
+    left -9999px
+    // border 3px solid #657384
+    // border-radius 4px
+
+
+    &__form
+        text-align right
+        margin-bottom 33px
+
+        .title
+            letter-spacing -1px
+            margin-bottom 30px
+            text-align left
+
+        input
+        textarea
+            color $color-main
+            padding 8px
+            background-color $color-white
+            border 1px solid #adb6c0
+            border-radius 3px
+            float right
+            width 70%
+
+            +below('xs')
+                width 100%
+
+
+        label
+            position relative
+            top 12px
+
+            +below('xs')
+                top 0
+                margin-bottom 7px
+                display block
+
+            span
+                // display block
+                // margin-top 5px
+                color #9fa5ab
+                font-size 11px
+                line-height 20px
+
+
+    &__input
+        m-cf()
+        margin-bottom 10px
+        text-align left
+
+    &__controls
+        width 70%
+        display inline-block
+        text-align left
+
+        +below('xs')
+            text-align center
+            width 100%
+
+        button
+            btn-blue()
+
+    .error
+        border-color red

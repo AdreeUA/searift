@@ -1,0 +1,34 @@
+include ../../../node_modules/bemto.jade/bemto
+include ../footer/footer
+include ../head/head
+include ../pop-up/pop-up
+
+doctype html
+html(class="no-js", lang="ru")
+
+	head
+		block head
+
+	body.page
+		|%=symbols=%
+
+		.page__wrapper
+
+			block content
+
+			+footer()
+			+pop-up(popUpHeader.defaults)
+			+pop-up(popUpProduct.defaults)
+
+
+		script(src='%=static=%js/separate-js/jquery-2.2.4.min.js')
+		script(src='%=static=%js/separate-js/slick.js')
+		script(src='%=static=%js/separate-js/jquery.tinyscrollbar.js')
+		//- script(src='%=static=%js/separate-js/swiper.js')
+		script(src='%=static=%js/separate-js/jquery.validate.js')
+		script(src='%=static=%js/separate-js/jquery.fancybox.js')
+
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAzsFisPy_TJWbTgpdjLGUWmTME6scsAwc&callback=initMap' async defer)
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

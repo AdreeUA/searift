@@ -1,0 +1,58 @@
+.nav-main
+    color $color-main
+
+    +below(1200px)
+        font-size 13px
+
+    +below('sm')
+        left 0
+        width 100%
+        top -999px
+        background $bg-nav
+        position fixed
+        width 100%
+        z-index 2
+        transition all .25s
+        padding-bottom 15px
+
+        &_open
+            top 37px
+
+    &__item
+        display inline-block
+        vertical-align top
+
+        &:first-child
+            a
+                padding-left 0
+
+        +below('sm')
+            display block
+            max-width 500px
+            margin 0 auto
+            text-align center
+
+            &:first-child
+                a
+                    // padding-left 7px
+
+    &__link
+        display block
+        padding 10px 7px
+        text-decoration none
+        border-bottom 2px solid transparent
+
+        &:hover
+            color $color-link
+            border-bottom 2px solid
+
+        +below(1200px)
+            padding 10px 5px
+            letter-spacing -1px
+
+        +below('sm')
+            display inline-block
+            color $color-white
+
+            &:hover
+                color darken($color-white, 20)

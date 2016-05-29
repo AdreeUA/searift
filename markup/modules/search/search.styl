@@ -1,0 +1,37 @@
+.search
+    position relative
+
+    &__fieldinput
+        input
+            background-color $color-white
+            border 1px solid #adb6c0
+            border-radius 3px
+            width 100%
+            font-size 12px
+            color #9fa5ab
+            padding 16px 19px
+            color $color-main
+
+    &__controls
+        position absolute
+        top 50%
+        margin-top -9px
+        right 16px
+        button
+            border none
+            bg($loop)
+            background-color transparent
+
+.search-wrap
+    margin-bottom 8px
+    z-index 10
+
+    +below('sm')
+        position fixed
+        top 37px
+        width 100%
+        left -999px
+        transition all .25s
+
+        &_open
+            left 0

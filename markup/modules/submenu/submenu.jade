@@ -1,0 +1,5 @@
+mixin submenu(data)
+	+b.UL.submenu&attributes(attributes)
+		each ent, num in data
+			+e.item
+				+e.link(href="#{ent.link}")= ent.name

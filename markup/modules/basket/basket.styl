@@ -1,0 +1,54 @@
+.basket
+    color $color-white
+    position relative
+    display inline-block
+    cursor pointer
+
+    &:before
+        content ''
+        display inline-block
+        margin-right 12px
+        bg($basket)
+        margin-bottom -2px
+
+    &:after
+        content ''
+        position absolute
+        top 0
+        left -20px
+        width 1000%
+        height 37px
+        background-color #3c679a
+        z-index -1
+
+    &:hover
+        color $color-white
+        // .product-basket
+        //     display block
+        &:before
+            bg($basket-hover)
+
+    // +below(xs)
+    //     position static
+
+    &__oder
+        display inline-block
+        vertical-align middle
+        text-align center
+        line-height 25px
+        width 25px
+        height 25px
+        border-radius 50%
+        background $color-second
+        margin-left 12px
+
+        &:hover
+            color $color-white
+
+    &__container
+        position absolute
+        width 584px
+        // bottom 34px
+        top 0
+        // right 0
+        // z-index 10

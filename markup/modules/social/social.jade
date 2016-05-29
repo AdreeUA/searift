@@ -1,0 +1,10 @@
+mixin social(data)
+	+b.UL.social&attributes(attributes)
+		+e.item
+			+e.A.link_vk(href="#") 
+				!= jadeHelpers.Icon.call(locals, {iconName: 'vk', className: 'icon'})
+				| Вконтакте
+		+e.item
+			+e.A.link_fb(href="#") 
+				!= jadeHelpers.Icon.call(locals, {iconName: 'fb', className: 'icon'})
+				| Facebook

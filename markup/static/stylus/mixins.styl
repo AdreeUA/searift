@@ -1,0 +1,110 @@
+// Mixins.
+
+m-nl()
+    margin 0
+    padding 0
+    text-indent 0
+    list-style none
+    list-style-position outside
+
+m-cf()
+    &:before, &:after
+        display table
+        content ""
+
+    &:after
+        clear both
+
+    .lt-ie8 &
+        zoom 1
+
+
+m-blocks-justify()
+    text-align justify
+    text-justify newspaper
+
+
+// You can add your own mixins here:
+
+triangle(width = 10px, height = 10px, direction = 'bottom', color = #000)
+
+	// Base triangle styles
+	width 0
+	height 0
+	background 0
+	border-style solid
+
+	// Styles for each direction
+	directions = {
+		top: {
+			border-width: 0 (width * .5) height (width * .5),
+			border-color: transparent transparent color transparent
+		},
+		topRight: {
+			border-width: 0 width height 0,
+			border-color: transparent color transparent transparent
+		},
+		right: {
+			border-width: (height * .5) 0 (height *.5) width,
+			border-color: transparent transparent transparent color
+		},
+		bottomRight: {
+			border-width: 0 0 height width,
+			border-color: transparent transparent color transparent
+		},
+		bottom: {
+			border-width: height (width * .5) 0 (width * .5),
+			border-color: color transparent transparent transparent
+		},
+		bottomLeft: {
+			border-width: width 0 0 height,
+			border-color: transparent transparent transparent color
+		},
+		left: {
+			border-width: (height * .5) width (height * .5) 0,
+			border-color: transparent color transparent transparent
+		},
+		topLeft: {
+			border-width: height width 0 0,
+			border-color: color transparent transparent transparent
+		}
+	}
+
+	// Mixin styles for passed direction
+	styles = directions[direction]
+	{styles}
+
+btn-basket()
+    padding 11px
+    background-color $color-second
+    border-bottom-right-radius 3px
+    border-top-right-radius 3px
+    box-shadow 0 2px 0 #f98a4c
+    color $color-white
+    display inline-block
+    vertical-align middle
+    position relative
+    text-decoration none
+    text-transform uppercase
+    transition all 1s
+    background-position 50% 50%
+
+    &:hover
+        color $color-white
+        background-image url(__static__assets/product-cart/catalog-cart-btn.png)
+        background-repeat no-repeat
+btn-blue()
+    background-color $bg-nav
+    border none
+    color $color-white
+    font-size 12px
+    text-transform uppercase
+    padding 12px 15px
+    border-radius 3px
+    box-shadow 0 2px 0 #486a92
+    background-position 50% 50%
+
+    &:hover
+        color $color-white
+        background-image url(__static__content/bg-btn-blue.png)
+        background-repeat no-repeat

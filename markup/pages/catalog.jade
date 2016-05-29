@@ -1,0 +1,21 @@
+extends ../modules/layout-default/layout-default
+include ../modules/header/header
+include ../modules/catalog/catalog
+include ../modules/search/search
+include ../modules/catalog-list/catalog-list
+include ../modules/pop-up/pop-up
+
+block head
+	+head(head.defaults)
+
+block content
+	+header
+	.container
+		.row
+			.col-md-3
+				+catalog(catalog.defaults)
+			.col-md-9
+				.search-wrap
+					+search
+				.content
+					+catalog-list(catalogList.defaults)

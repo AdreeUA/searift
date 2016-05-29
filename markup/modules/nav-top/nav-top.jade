@@ -1,0 +1,20 @@
+include ../basket/basket
+include ../burger/burger
+
+
+mixin nav-top(data)
+	+b.nav-top&attributes(attributes)
+		.container
+			.row
+				+e.burger-wrap
+					+burger.__burger
+				+e.search-wrap
+					+e.BUTTON.search
+
+				+e.mob-wrap#topNav
+					.col-md-3.nav-top__mob-item
+						+e.A.bookmarks(href="#") Добавить в закладки
+					.col-md-6.nav-top__mob-item
+						+e.A.questions(href="#") Есть вопросы? Пишите нам mail@mail.ru
+				.col-md-3.nav-top__basket
+					+basket

@@ -1,0 +1,37 @@
+include ../title/title
+include ../product-cart/product-cart
+
+mixin stock(data)
+	+b.stock&attributes(attributes)
+		+title акции и скидки
+		+e.UL.list
+			+product-cart.__item
+				+e.IMG.image(src="__static__img/assets/index-catalogs/image-1.jpg")
+				+e.A.header(href="#") место для названия акции
+					+e.SPAN.date с 13.05 по 13.06
+				+e.btns
+					+e.A.btn-more(href="#") подробнее
+			+product-cart.__item
+				+e.IMG.image(src="__static__img/assets/index-catalogs/image-2.jpg")
+				+e.A.header(href="#") место для названия акции
+					+e.SPAN.date с 13.05 по 13.06
+				+e.btns
+					+e.A.btn-more(href="#") подробнее
+			+product-cart.__item
+				+e.IMG.image(src="__static__img/assets/index-catalogs/image-3.jpg")
+				+e.A.header(href="#") место для названия акции
+					+e.SPAN.date с 13.05 по 13.06
+				+e.btns
+					+e.A.btn-more(href="#") подробнее
+			+product-cart.__item
+				+e.IMG.image(src="__static__img/assets/index-catalogs/image-3.jpg")
+				+e.A.header(href="#") место для названия акции
+					+e.SPAN.date с 13.05 по 13.06
+				+e.btns
+					+e.A.btn-more(href="#") подробнее
+			+product-cart.__item
+				+e.IMG.image(src="__static__img/assets/index-catalogs/image-3.jpg")
+				+e.A.header(href="#") место для названия акции
+					+e.SPAN.date с 13.05 по 13.06
+				+e.btns
+					+e.A.btn-more(href="#") подробнее

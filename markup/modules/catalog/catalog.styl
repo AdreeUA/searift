@@ -1,0 +1,96 @@
+.catalog
+    position relative
+    margin-bottom 40px
+
+    &__title
+        text-align center
+        background-color $bg-nav
+        border-radius 3px
+        padding 17px 10px
+        background-image url(__static__assets/catalog/catalog-title.png)
+        background-repeat no-repeat
+        background-position 12px 50%
+        text-transform uppercase
+        color $color-white
+
+    &__list
+        background-color #f0f3f7
+        z-index 100
+
+        +below('sm')
+            top 47px
+            left -999px
+            position absolute
+            width 100%
+            transition all .25s
+
+            &_open
+                left 0
+
+    &__item
+        position relative
+        &:hover
+            .catalog__sub
+                display block
+
+    &__link
+        display block
+        text-decoration none
+        color $color-main
+        padding 15px 13px 12px
+        border-bottom 2px solid #e2e7ee
+
+        &:hover
+            color $bg-nav
+            border-bottom 2px solid
+            background-color #f6f8fb
+
+        +between(992px, md)
+            padding 12px 13px 10px
+            font-size 13px
+
+    &__sub
+        display none
+        position absolute
+        z-index 2
+        left 100%
+        top -2px
+        border-top 2px solid #e2e7ee
+        // min-height 352px
+        m-cf()
+        width 735px
+        padding 25px 30px 25px 53px
+        background-color #f6f8fb
+
+        +below('sm')
+            position static
+            padding 15px 15px 15px 30px
+            width auto
+            max-height inherit
+
+    &__submenu
+        display inline-block
+        vertical-align top
+        width 354px
+
+        +below('sm')
+            width 100%
+
+
+    &__product-cart
+        display inline-block
+        vertical-align top
+        margin-right 30px
+        width 263px
+
+        +below('sm')
+            display none
+
+    &__burger-wrap
+        display none
+        position absolute
+        right 22px
+        top 17px
+
+        +below('sm')
+            display block

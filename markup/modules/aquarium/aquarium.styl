@@ -1,0 +1,105 @@
+.aquarium
+
+    +below('sm')
+        display none
+
+    &__image-wrap
+        position relative
+
+    &__image
+        width 100%
+
+    &__marks
+        position absolute
+
+        &_feed
+            top 11px
+            left 50%
+
+        &_accessories
+            right 21px
+            top 84px
+
+        &_invertebrates
+            bottom 81px
+            right 18%
+
+        &_fish
+            bottom 0
+            left 26%
+
+        &_plants
+            left 127px
+            bottom 26%
+
+
+    &__text
+        color $color-white
+        padding 11px 10px 13px
+        background-color rgba(#091625, .9)
+        border-radius 3px
+        position relative
+        display block
+        text-decoration none
+
+        &:hover
+            color $color-white
+
+        &:before
+            content ''
+            position absolute
+
+        &_bottom
+            transform translate(-77%, -36px)
+
+            &:before
+                content ''
+                triangle(6px, 6px, bottomRight, rgba(#091625, .9))
+                top -4px
+                right 0
+
+            &:hover
+                background-color rgba($color-second, .9)
+                &:before
+                    triangle(6px, 6px, bottomRight, rgba($color-second, .9))
+
+        &_top
+            transform translate(47px, -99px)
+
+            &:before
+                triangle(6px, 6px, topLeft, rgba(#091625, .9))
+                bottom -4px
+                left 0
+
+            &:hover
+                background-color rgba($color-second, .9)
+                &:before
+                    triangle(6px, 6px, topLeft, rgba($color-second, .9))
+
+        &_top-left
+            transform translate(-50%, -99px)
+
+            &:before
+                triangle(6px, 6px, topRight, rgba(#091625, .9))
+                bottom -4px
+                right 0
+
+            &:hover
+                background-color rgba($color-second, .9)
+                &:before
+                    triangle(6px, 6px, topRight, rgba($color-second, .9))
+
+    &__circle
+        width 98px
+        height 98px
+        border-radius 50%
+        border 2px solid $color-white
+
+        &:before
+            content ''
+            display block
+            margin 45px auto 0 auto
+            width 8px
+            height 8px
+            border-radius 50%
+            background-color $color-white

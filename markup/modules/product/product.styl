@@ -1,0 +1,125 @@
+.product
+    position relative
+    margin 0 -15px
+    font-size 14px
+
+    +between(990px, md)
+        font-size 12px
+
+    +below(990px)
+        margin 0
+
+    &__wrap
+        padding-bottom 22px
+
+        +below(xs)
+            padding-top 0
+
+    &__preview
+        margin-bottom 27px
+
+        +below(xs)
+            // margin-bottom 44px
+
+        // +above(md)
+        //     margin-bottom 130px
+
+    &__catalog
+        margin-bottom 101px
+        padding-top 52px
+        border-top 1px solid #c9d2dc
+
+    .title
+        margin-bottom 30px
+        padding-right 130px
+
+        +below(xs)
+            padding-right 0
+            margin-bottom 20px
+
+    &__btn-back
+        color $bg-nav
+        text-decoration underline
+        position absolute
+        right 0
+        top 6px
+        display block
+
+        &:hover
+            color $bg-nav
+            text-decoration none
+
+        +below(xs)
+            position static
+            margin-bottom 20px
+
+    &__btns
+        text-align center
+
+    &__btn-question
+        color $color-white
+        font-size 12px
+        line-height 22px
+        text-transform uppercase
+        background-color $bg-nav
+        border-radius 3px
+        box-shadow 0 2px 0 #486a92
+        padding 11px 20px
+        text-decoration none
+        display inline-block
+        margin-bottom 32px
+
+        &:hover
+            color $color-white
+
+        &:first-of-type
+            margin-right 12px
+
+        +between(990px, md)
+            padding 10px 12px
+            font-size 11px
+
+    &__characteristic
+        line-height 1.6
+        border-bottom 1px solid #c9d2dc
+        padding-bottom 30px
+        margin-bottom 30px
+
+        +between(990px, md)
+            padding-bottom 20px
+            margin-bottom 20px
+
+    &__exist
+        margin-bottom 28px
+
+        +between(990px, md)
+            margin-bottom 18px
+
+    &__btns-price
+        m-cf()
+        vertical-align middle
+        margin-bottom 39px
+
+    &__btn-basket
+        btn-basket()
+        border none
+        border-radius 3px
+        float right
+
+    &__price
+        display inline-block
+        vertical-align top
+        font-size 18px
+        margin-top 6px
+
+        span
+            font-size 30px
+            font-family $font-bold
+
+    &__subtitle
+        font-size 16px
+        font-family $font-bold
+        margin-bottom 28px
+
+    &__disc-text
+        margin-bottom 28px
