@@ -1,21 +1,20 @@
-// $(window).width() < 768)
+// Событие для клика по копке КОРЗИНА
 jQuery(function ($) {
+	var basketButton = $('.basket');
+	var basketList = $('.product-basket');
+	var basketItem = $('.product-basket__item');
+
+	basketButton.click(function () {
+		basketList.toggleClass('product-basket_open');
+		basketButton.toggleClass('basket_open');
+	});
 
 	$(document).mouseup(function (e) {
 
-		var basketButton = $('.basket');
-		var basketList = $('.product-basket');
-
-		// var list = $('.catalog__list');
-		// var button = $('.catalog__burger');
-
-		basketButton.click(function () {
-			basketList.toggleClass('product-basket_open');
-		});
-
-		if (!basketList.is(e.target) && basketList.has(e.target).length === 0) {
+		if (!basketButton.is(e.target) && !basketList.is(e.target) && basketList.has(e.target).length === 0 && basketButton.has(e.target).length === 0) {
 			basketList.removeClass('product-basket_open');
+			basketButton.removeClass('basket_open');
 		}
+
 	});
 });
-// && basketButton.has(e.target).length === 0

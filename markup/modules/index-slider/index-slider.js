@@ -1,3 +1,4 @@
+// Первый слайдер на главной станице
 $('.index-slider__controlls').detach();
 $('.shares__list').slick({
 	// dots: true,
@@ -9,19 +10,3 @@ $('.shares__list').slick({
 		}
 	}]
 });
-
-
-
-//
-// (function () {
-// 	var mySwiper = new Swiper('.index-slider__container', {
-// 		slidesPerView: 1,
-// 		paginationClickable: true,
-// 		loop: true,
-// 		nextButton: '.swiper-button-next',
-// 		prevButton: '.swiper-button-prev',
-// 		paginationType: 'bullets',
-// 		pagination: '.index-slider__pagination'
-// 	});
-//
-// })();

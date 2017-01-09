@@ -3,6 +3,7 @@
     position relative
     display inline-block
     cursor pointer
+    transition all .3s
 
     &:before
         content ''
@@ -11,22 +12,24 @@
         bg($basket)
         margin-bottom -2px
 
-    &:after
-        content ''
-        position absolute
-        top 0
-        left -20px
-        width 1000%
-        height 37px
-        background-color #3c679a
-        z-index -1
 
-    &:hover
+
+    &_open
         color $color-white
         // .product-basket
         //     display block
         &:before
             bg($basket-hover)
+
+        &:after
+            content ''
+            position absolute
+            top 0
+            left -20px
+            width 1000%
+            height 37px
+            background-color #3c679a
+            z-index -1
 
     // +below(xs)
     //     position static

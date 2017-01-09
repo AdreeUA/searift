@@ -16,10 +16,10 @@ mixin product-basket(data)
 						input(type="number" value="#{ent.amount}")
 					+e.item-price 
 						span #{ent.price} 
-						руб.
+						| руб.
 
 		+e.total
 			+e.total-price Итого: 
 				span 1460 
 				+e.SPAN.currency руб.
-			+e.total-btn Оформить
+			+e.BUTTON.total-btn Оформить

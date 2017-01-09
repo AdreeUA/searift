@@ -1,3 +1,5 @@
+// Инициализация Google Maps
+
 var map;
 
 function initMap() {

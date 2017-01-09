@@ -7,7 +7,7 @@
     position absolute
     width 584px
     top 36px
-    right -117px
+    right 5px
     padding 21px
     line-height 1
     text-align left
@@ -17,7 +17,7 @@
     +below(md)
         right -67px
     +below(sm)
-        right -15px
+        right 0
     +below(xs)
         // pointer-events none
         position fixed
@@ -125,6 +125,8 @@
         font-size 20px
         font-family $font-bold
         text-align right
+        display inline-block
+        float right
 
     &__total-price
         margin-bottom 9px
@@ -136,6 +138,7 @@
 
     &__total-btn
         btn-basket()
+        border none
         font-size 12px
         text-transform uppercase
         line-height 1

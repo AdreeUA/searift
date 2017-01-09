@@ -1,0 +1,16 @@
+extends ../modules/layout-default/layout-default
+include ../modules/header/header
+
+block head
+	+head(head.defaults)
+
+block content
+	+header
+	.container
+		.row
+			+b.UL.list
+				each item in __pages
+					if item.name !== 'pages'
+						+e.item
+							a(href=item.href) Cтраница "#{item.name}"
+

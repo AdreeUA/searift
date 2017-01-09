@@ -2,19 +2,11 @@
 /* Slider */
 .slick-loading .slick-list
 {
-    background: #fff url('__static__plugins/ajax-loader.gif') center center no-repeat;
+    background: #fff url('../../img/plugins/ajax-loader.gif') center center no-repeat;
 }
 
 /* Icons */
-@font-face
-{
-    font-family: 'slick';
-    font-weight: normal;
-    font-style: normal;
 
-    src: url('../fonts/slick/slick.eot');
-    src: url('../fonts/slick/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick/slick.woff') format('woff'), url('../fonts/slick/slick.ttf') format('truetype'), url('../fonts/slick/slick.svg#slick') format('svg');
-}
 /* Arrows */
 .slick-prev,
 .slick-next
@@ -56,6 +48,7 @@
     color: transparent;
     outline: none;
     background: transparent;
+    border: 2px solid rgba(255,255,255,1);
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,
@@ -100,7 +93,7 @@
     width: 12px;
     height: 20px;
     background-position: 0px -37px;
-    background-image: url("../img/png-sprite/96dpi/sprite.png");
+    background-image: url("../../img/png-sprite/96dpi/sprite.png");
     background-size: 97px 68px;
     background-repeat: no-repeat;
 
@@ -125,7 +118,7 @@
     width: 12px;
     height: 20px;
     background-position: -16px -37px;
-    background-image: url("../img/png-sprite/96dpi/sprite.png");
+    background-image: url("../../img/png-sprite/96dpi/sprite.png");
     background-size: 97px 68px;
     background-repeat: no-repeat;
 }

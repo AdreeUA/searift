@@ -1,164 +1,150 @@
-// enquire.register('screen and (min-width: 992px)', {
-// 	match: function () {
-// 		// Load sidebar content in via AJAX.
-// 		// Show sidebar
-// 		$('#scrollbar1').tinyscrollbar({
-// 			axis: 'x',
-// 			thumbSize: 275,
-// 			wheelSpeed: 5,
-// 			autoUpdate: false
-// 		});
-// 	},
-// 	unmatch: function () {
-// 		// Hide the sidebar
-// 		$('.index-catalogs__list').slick({
-//
-// 		});
-// 	}
-// });
-//
-// $('.index-catalogs__list').slick({
-//
-// });
+// Инициализация слайдера блока .index-catalogs__list
 
-// $(document).ready(function () {
-// 	// The axis option is for setting the dimension in
-// 	// which the scrollbar should operate.
-// 	//
-// 	$('#scrollbar1').tinyscrollbar({
-// 		axis: 'x',
-// 		thumbSize: 275,
-// 		wheelSpeed: 5,
-// 		autoUpdate: false
-// 	});
-// });
-// $(document).ready(function () {
-// 	// The axis option is for setting the dimension in
-// 	// which the scrollbar should operate.
-//
-// 	// 	enquire
-// 	// .register("screen and (max-width:50em)", function() {
-// 	//     console.log("handler 1 matched");
-// 	// })
-// 	// .register("screen and (max-width:40em)", function() {
-// 	//     console.log("handler 2 matched");
-// 	// });
-// 	//
-// 	// enquire.register('screen and (min-width: 992px)', {
-// 	// 	match: function () {
-// 	// 		// Load sidebar content in via AJAX.
-// 	// 		// Show sidebar
-// 	// 		$('#scrollbar1').tinyscrollbar({
-// 	// 			axis: 'x',
-// 	// 			thumbSize: 275,
-// 	// 			wheelSpeed: 5,
-// 	// 			autoUpdate: false
-// 	// 		});
-// 	// 	},
-// 	// 	unmatch: function () {
-// 	// 		// Hide the sidebar
-// 	// 		// $('#scrollbar1').tinyscrollbar(false);
-// 	// 		$('.index-catalogs__list').slick({
-// 	//
-// 	// 		});
-// 	// 	}
-// 	// });
-//
-// // });
-//
-
-var scrollbar = $('#scrollbar1');
-var scrollOption = {
-	axis: 'x',
-	thumbSize: 275,
-	wheelSpeed: 5,
-	autoUpdate: false,
-	wheel: false
+function updateItem() {
+	var maxHeight = 0;
+	$('.index-catalogs__item').each(function () {
+		if ($(this).height() > maxHeight) {
+			maxHeight = $(this).height();
+		};
+		$(this).height(maxHeight);
+		console.log(maxHeight);
+	});
 };
 
+$(document).ready(function () {
 
-if ($(window).width() < 768) {
+	// var maxHeight = 0;
+	// $('.index-catalogs__item').each(function () {
+	// 	if ($(this).height() > maxHeight)
+	// 		maxHeight = $(this).height();
+	// 	$('.index-catalogs__item').height(maxHeight);
+	// });
+	// $(window).resize(function () {
+	// 	var maxHeight = 0;
+	// 	$('.index-catalogs__item').each(function () {
+	// 		if ($(this).height() > maxHeight)
+	// 			maxHeight = $(this).height();
+	// 		$(this).height(maxHeight);
+	// 	});
+	// $('.index-catalogs__list').each(function () {
+	// 	var maxHeight = 0;
+	// 	$(this).children('.index-catalogs__item').each(function () {
+	// 		if ($(this).height() > maxHeight)
+	// 			maxHeight = $(this).height();
+	// 	});
+	// 	// $('.viewport').height(maxHeight);
+	// 	$('.product-cart').height(maxHeight);
+	// });
+	// });
+
+
+	// var maxHeight = 0;
+	// $('.product-cart').each(function () {
+	// 	if ($(this).height() > maxHeight)
+	// 		maxHeight = $(this).height();
+	// 	$(this).height(maxHeight);
+	// });
+
+	updateItem();
+
+
+
+	$('.product-cart').css('display', 'block');
 	$('.viewport').removeClass();
 	$('.overview').removeClass('overview');
 	$('.scrollbar').remove();
 	$('.index-catalogs__list').slick({
-		arrows: false,
+		// arrows: false,
 		slidesToShow: 4,
-		dots: true,
+		dots: false,
 		infinite: true,
+		slidesToScroll: 4,
+		adaptiveHeight: true,
 		responsive: [{
-			breakpoint: 1200,
+			breakpoint: 1201,
 			settings: {
-				slidesToShow: 3
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				dots: true,
+				arrows: false
 			}
 		}, {
 			breakpoint: 992,
 			settings: {
-				slidesToShow: 2
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				arrows: false,
+				dots: true
 			}
 		}, {
 			breakpoint: 768,
 			settings: {
-				slidesToShow: 1
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				// fade: true,
+				arrows: false,
+				dots: true
 			}
 		}]
 	});
 
-}
-if ($(window).width() > 768) {
-	scrollbar.tinyscrollbar(scrollOption);
-}
-// $('.index-slider__controlls').detach();
-// $('.swiper-scrollbar').detach();
 
-// $('.index-catalogs__list').slick({
-// 	dots: true,
-// 	arrows: false,
-// 	slidesToShow: 4,
-// 	infinite: true,
-// 	responsive: [{
-// 			breakpoint: 1200,
-// 			settings: {
-// 				slidesToShow: 3
-// 			}
-// 		}, {
-// 			breakpoint: 992,
-// 			settings: {
-// 				slidesToShow: 2
-// 			}
-// 		}, {
-// 			breakpoint: 768,
-// 			settings: {
-// 				slidesToShow: 1
-// 			}
-// 		}
-//
-// 	]
-// });
+	// if ($(window).width() < 998) {
+	// 	$('.product-cart').css('display', 'block');
+	// 	$('.viewport').removeClass();
+	// 	$('.overview').removeClass('overview');
+	// 	$('.scrollbar').remove();
+	// 	$('.index-catalogs__list').slick({
+	// 		arrows: false,
+	// 		slidesToShow: 4,
+	// 		dots: true,
+	// 		infinite: true,
+	// 		responsive: [{
+	// 			breakpoint: 1200,
+	// 			settings: {
+	// 				slidesToShow: 3
+	// 			}
+	// 		}, {
+	// 			breakpoint: 992,
+	// 			settings: {
+	// 				slidesToShow: 2
+	// 			}
+	// 		}, {
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 				slidesToShow: 1
+	// 			}
+	// 		}]
+	// 	});
+	//
+	// }
+	// if ($(window).width() > 998) {
+	// 	scrollbar.tinyscrollbar(scrollOption);
+	// 	// $(".index-catalogs__list").each(function () {
+	// 	// 	var h_block = $('.index-catalogs__item').height();
+	// 	// 	if (h_block > viewportHeight) {
+	// 	// 		viewportHeight = h_block + 30;
+	// 	// 	};
+	// 	// });
+	// 	// $(".viewport").height(viewportHeight);
+	// 	$(".overview").width(countItem * (itemWidth + 5));
+	//
+	// 	$(function () {
+	// 		$('.index-catalogs__list').each(function () {
+	// 			var maxHeight = 0;
+	// 			$(this).children('.index-catalogs__item').each(function () {
+	// 				if ($(this).outerHeight() > maxHeight)
+	// 					maxHeight = $(this).outerHeight();
+	// 			});
+	// 			$('.viewport').outerHeight(maxHeight);
+	// 			$('.product-cart').outerHeight(maxHeight);
+	// 		});
+	// 	});
+	//
+	// }
 
+});
 
-
-// (function () {
-// 	var swiper = new Swiper('.index-catalogs__container', {
-// 		scrollbar: '.swiper-scrollbar',
-// 		scrollbarHide: false,
-// 		slidesPerView: 'auto',
-// 		spaceBetween: 30,
-// 		grabCursor: true,
-// 		paginationClickable: true,
-// 		paginationType: 'bullets',
-// 		pagination: '.index-catalogs__pagination',
-// 		breakpoints: {
-// 			992: {
-// 				// pagination: '.index-catalogs__pagination',
-// 				slidesPerView: 2,
-// 				// scrollbar: '',
-// 				// paginationType: 'bullets',
-// 			},
-// 			768: {
-// 				slidesPerView: 1
-// 			}
-// 		}
-// 	});
-//
-// })();
+$(window).resize(function () {
+	updateItem();
+});

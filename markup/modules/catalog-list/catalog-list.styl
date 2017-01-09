@@ -1,4 +1,5 @@
 .catalog-list
+    padding-top 30px
 
     .title
         margin-bottom 30px
@@ -7,11 +8,13 @@
         font-size 0
         text-align center
         margin 0 -15px 50px
-
+        display flex
+        flex-wrap wrap
 
     &__item
         font-size 14px
         display inline-block
+        vertical-align middle
         background-color $color-white
         border 1px solid #e2e5e9
         border-radius 3px
@@ -21,6 +24,9 @@
         transition hover .25s
         margin 0 8px 20px
         width  200px
+        display flex
+        flex-direction column
+        justify-content center
 
         &:hover
             border 1px solid $bg-nav
@@ -35,9 +41,11 @@
         display block
 
     &__image
-        width 100%
-        display block
+        max-width 100%
+        display inline-block
         margin-bottom 22px
+        vertical-align middle
 
-    &__text
-        margin-bottom 32px
+    &__disc
+        p
+            margin-bottom 32px

@@ -145,11 +145,13 @@
 }
 
 .fancybox-nav span {
+	background-image: url("../../img/png-sprite/96dpi/sprite.png");
+	background-repeat: no-repeat;
 	position: absolute;
 	top: 50%;
-	width: 36px;
-	height: 34px;
-	margin-top: -18px;
+	width: 12px;
+	height: 20px;
+	margin-top: -10px;
 	cursor: pointer;
 	z-index: 8040;
 	visibility: hidden;
@@ -157,12 +159,16 @@
 
 .fancybox-prev span {
 	left: 10px;
-	background-position: 0 -36px;
+	background-position: 0px -37px;
+	background-image: url("../../img/png-sprite/96dpi/sprite.png");
+	background-size: 97px 68px;
 }
 
 .fancybox-next span {
 	right: 10px;
-	background-position: 0 -72px;
+	background-position: -16px -37px;
+	background-image: url("../../img/png-sprite/96dpi/sprite.png");
+	background-size: 97px 68px;
 }
 
 .fancybox-nav:hover span {

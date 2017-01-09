@@ -1,37 +1,55 @@
 .preview
-    // padding-bottom 30px
-
-    +above(md)
-        //
-
-        // .swiper-pagination-bullet-active
-
-    .slick-current
-        img
-            transition all .3s
-            border 2px solid #fff
-            box-shadow  0 0 0 1px $bg-nav
+    text-align center
+    vertical-align middle
 
     img
         display inline-block
         border 1px solid #e2e5e9
+        // max-width 100%
+
+        +below(sm)
+            width 100%
 
     &__full
-        margin-bottom 4px
+        &.slick-slider
+            margin-bottom 4px
 
         +below('sm')
             padding-bottom 40px
             margin-bottom 0
 
     &__min
+        img
+            max-width 100%
+            display block
         +below(sm)
             display none
 
-    &__min-item
-        padding 3px
+    .slick-dots
+        position static
+        text-align left
+
+        +below(sm)
+            position absolute
+            text-align center
+
+        li
+            margin 0 0 7px
+            vertical-align middle
+            text-align center
+            padding 3px
+
+        .slick-active
+            img
+                transition all .3s
+                border 2px solid #fff
+                box-shadow  0 0 0 1px $bg-nav
 
     &__image-big
-        min-height 388px
+        // min-height 388px
+        max-width 100%
+        // width 561px
+        // height 100%
 
         +below(sm)
             min-height auto
@@ -41,12 +59,12 @@
 
 
     &__image-min
-        width 190px
+        max-width 126px
         display inline-block
-        width 130px
-        height 92px
+        // width 130px
+        max-height 92px
         border-radius 0
         margin-right 7px
 
     .slick-dots
-        bottom 18px
+        bottom 10px

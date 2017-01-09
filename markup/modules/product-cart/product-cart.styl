@@ -4,11 +4,19 @@
     border-radius 3px
     padding 10px
     position relative
-    text-align left
+    text-align center
+    display flex !important
+    flex-direction column
+    justify-content center
+    align-items center
+    min-height 100%
 
     &__image
         margin-bottom 12px
-        width 100%
+        // width 100%
+        max-width 100%
+        display inline-block !important
+        vertical-align middle
 
     &__title
         color $bg-nav
@@ -17,6 +25,7 @@
         text-decoration none
         display block
         margin-bottom 10px
+        text-align left
 
     &__header
         margin-left -10px
@@ -54,6 +63,7 @@
 
     &__btns
         text-align justify
+        width 100%
 
     &__price-wrap
         width 31%
@@ -70,6 +80,9 @@
 
     &__btn
         btn-basket()
+
+        &_sale
+            padding 12px 8px 12px 52px
 
     &__btn-more
         padding 11px
@@ -93,14 +106,21 @@
     &__sale
         display inline-block
         vertical-align middle
-        margin-right -3px
+        // margin-right -3px
+        border-bottom-left-radius 3px
         padding 12px 8px
+        position absolute
+        left 0
+        top 0
+        height 100%
         color $color-white
         font-size 12px
         text-transform uppercase
         background-color #f57229
-        border-radius 3px
-        box-shadow 0 2px 0 #f98a4c
+        // border-radius 3px
+        // box-shadow 0 2px 0 #f98a4c
+
+
 
     &__sale-baner
     &__special-baner

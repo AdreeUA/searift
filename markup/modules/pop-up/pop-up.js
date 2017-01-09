@@ -1,3 +1,5 @@
+// ПОПАП
+
 $(document).ready(function () {
 
 	$('.pop-up').hide();
@@ -11,7 +13,8 @@ $(document).ready(function () {
 		},
 		fitToView: false,
 		autoSize: false,
-		width: 360,
+		width: '100%',
+		maxWidth: 360,
 		autoHeight: true
 	};
 

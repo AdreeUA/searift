@@ -1,5 +1,6 @@
 include ../basket/basket
 include ../burger/burger
+include ../product-basket/product-basket
 
 
 mixin nav-top(data)
@@ -18,3 +19,4 @@ mixin nav-top(data)
 						+e.A.questions(href="#") Есть вопросы? Пишите нам mail@mail.ru
 				.col-md-3.nav-top__basket
 					+basket
+					+product-basket(productBasket.defaults)
